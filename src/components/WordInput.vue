@@ -15,9 +15,6 @@
           class="resize-none p-2 rounded-md border-opacity-0 text-md  focus:outline-none font-bold tracking-wide bg-gray-200"
           v-model="inputWords"
         ></textarea>
-        <button class="filter drop-shadow-lg text-base my-4 mx-96 p-2 font-bold rounded-md text-white bg-gray-600">
-          SUBMIT
-        </button>
       </div>
     </form>
   </div>
@@ -33,11 +30,7 @@ export default {
     const inputWords = ref('');
     const results = computed(() => inputWords.value.replace(/\W/g, ' ').split(/(?:,| | {2})+/));
 
-    function countWords() {
-      console.log(results.value);
-    }
-
-    return { inputWords, countWords, results };
+    return { inputWords, results };
   },
 };
 </script>
