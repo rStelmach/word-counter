@@ -1,15 +1,11 @@
 <template>
-  <div
-    id="result"
-    class="container min-w-full min-h-screen bg-gray-500 bg-opacity-70 flex flex-col items-center py-24 "
-  >
-    <h1>Results</h1>
+  <div id="result" class="container min-w-full min-h-screen bg-gray-600 bg-opacity-70 flex flex-col items-center py-48">
+    <h1 class="filter drop-shadow-lg font-semibold text-white text-xl p-2">Results</h1>
     <div class=" overflow-auto overscroll-auto resultArray w-2/4 min-h-150 max-h-240 bg-gray-200 rounded-md ">
-      <li v-for="word in wordsCount" :key="word" class="list-none py-1 px-3 font-semibold">
-        {{ word.name }} {{ word.counter }}
+      <li v-for="word in wordsCount" :key="word" class="list-none py-1 px-3 font-semibold lowercase text-md">
+        {{ word.name }} <span class="text-yellow-400">{{ word.counter > 1 ? `x ${word.counter}` : '' }}</span>
       </li>
     </div>
-    <button class="text-xl" @click="siemaa">KLIKNIJ</button>
   </div>
 </template>
 
@@ -48,18 +44,6 @@ export default {
         return wordsByCount;
       }, []),
     );
-
-    // const siema = computed(() =>
-    //   props.results.reduce((a, b) => {
-    //     if (a.indexOf(b) < 0) a.push(b);
-    //     return a;
-    //   }, []),
-    // );
-
-    // function siemaa() {
-    //   console.log(siema.value);
-    // }
-
     return { wordsCount };
   },
 };

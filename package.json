@@ -13,7 +13,8 @@
     "postcss": "^7.0.36",
     "register-service-worker": "^1.7.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.2.4",
-    "vue": "^3.0.0"
+    "vue": "^3.0.0",
+    "vue3-smooth-scroll": "^0.8.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
