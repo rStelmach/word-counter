@@ -18,7 +18,9 @@
         <button
           class="filter drop-shadow-lg text-base my-4 mx-96 p-2 font-bold rounded-md text-white bg-gray-600 uppercase"
         >
-          see the results
+          <a href="#result" v-smooth-scroll="{ duration: 1000 }">
+            see the results
+          </a>
         </button>
       </div>
     </form>
